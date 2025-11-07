@@ -203,7 +203,7 @@
           <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">📌 報名方式</h2>
           <div class="space-y-4 text-white/95 text-lg mb-8">
             <p>👉 本活動 限額 15 人，填寫下方表單報名參加！</p>
-            <p>👉 活動費用自理（餐廳自由點餐），無額外報名費</p>
+            <p>👉 活動費用自理（餐廳自由點餐，餐點費用約 300 元上下），無額外報名費</p>
             <p>👉 填完表單後，我們會寄送詳細提醒信件！</p>
           </div>
           <a
