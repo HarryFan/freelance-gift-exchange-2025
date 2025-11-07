@@ -1,26 +1,21 @@
 {
   "name": "freelance-gift-exchange-2025",
-  "version": "1.0.0",
-  "description": "接案鬼故事・年底交換禮物小聚活動頁面",
+  "version": "2.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "test": "vitest",
-    "test:ui": "vitest --ui"
+    "preview": "vite preview"
   },
   "dependencies": {
+    "gsap": "^3.13.0",
     "vue": "^3.4.21"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",
-    "@vue/test-utils": "^2.4.5",
-    "autoprefixer": "^10.4.19",
-    "jsdom": "^24.0.0",
-    "postcss": "^8.4.38",
-    "tailwindcss": "^3.4.3",
-    "vite": "^5.2.0",
-    "vitest": "^1.5.0"
+    "autoprefixer": "^10.4.18",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
+    "vite": "^5.1.4"
   }
 }

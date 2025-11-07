@@ -8,11 +8,12 @@ export default {
     extend: {
       colors: {
         primary: {
-          purple: '#6C63FF',
-          blue: '#00C9FF'
-        }
-      }
+          from: '#6C63FF',
+          to: '#00C9FF',
+        },
+      },
     },
   },
   plugins: [],
 }
+
