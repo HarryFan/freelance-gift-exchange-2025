@@ -84,7 +84,7 @@ onUnmounted(() => {
 })
 </script>
 
-<style scoped>
+<style>
 .bubble {
   position: absolute;
   border-radius: 50%;
