@@ -18,5 +18,12 @@ describe("活動網頁測試", () => {
     render(<HomePage />);
     expect(screen.getByText("☔ 雨天備案")).toBeInTheDocument();
   });
+
+  it("應該顯示禮物規則文案（建議300元上下，超過也沒關係）", () => {
+    render(<HomePage />);
+    expect(
+      screen.getByText("不限主題、不限價格（建議300元上下，超過也沒關係）")
+    ).toBeInTheDocument();
+  });
 });
 ```

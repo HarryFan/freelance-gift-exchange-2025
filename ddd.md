@@ -15,6 +15,7 @@
 
 - **Bounded Contexts（建議）**
 - Registration BC：處理報名規則、名額、表單導向
+  （含禮物預算指引：建議300元上下，超過也沒關係）
 - Event BC：維護活動基本資料與流程節點
 - Participation BC：簽到、出席、禮物交換結果
 - Presentation BC：前端互動、動畫與頁面組成（可與 Design System 對接）
