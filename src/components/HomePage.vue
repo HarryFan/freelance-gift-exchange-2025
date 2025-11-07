@@ -72,7 +72,7 @@
       <section class="bg-white/95 backdrop-blur text-gray-800 p-6 md:p-8 rounded-2xl shadow-lg mb-10">
         <h2 class="text-2xl font-bold mb-4">🎁 禮物規則</h2>
         <div class="space-y-3">
-          <p><strong>不限主題、不限價格（建議300元上下）</strong></p>
+          <p><strong>不限主題、不限價格（建議300元上下，超過也沒關係）</strong></p>
           <p><strong>歡迎：</strong>創意工具、書籍、前東家週邊、廢物療癒小物、奇葩案子的紀念品</p>
           <p class="text-purple-700 font-medium">重點是「有故事」可分享，不用特別買，但帶誠意來！</p>
         </div>
