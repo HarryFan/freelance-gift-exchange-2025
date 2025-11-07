@@ -66,7 +66,7 @@
             </div>
             <div class="flex flex-col md:flex-row md:items-center gap-2">
               <span class="font-semibold min-w-[120px]">交流時間｜</span>
-              <span>聚餐交流至 16:30，自由離席</span>
+              <span>聚餐交流至 16:30，自由離席或續攤</span>
             </div>
           </div>
         </div>
