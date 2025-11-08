@@ -216,27 +216,47 @@
       <section class="max-w-4xl mx-auto mb-16 fade-in-up">
         <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-xl">
           <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">🎯 方案與抽獎機制</h2>
-          <div class="space-y-4 text-white/95 text-lg leading-relaxed">
-            <p><span class="font-semibold">方案 A｜$100</span>：參加 16:30 最終抽獎（獎品：餐費 NT$300）</p>
-            <p><span class="font-semibold">方案 B｜$200</span>：參加 15:30 早鳥抽獎（獎品：Cloud Pro 1 個月，價值 $650）</p>
-            <ul class="list-disc pl-6 space-y-2 text-base md:text-lg">
-              <li>每人限擇一方案；皆為現場支付（現金／行動支付皆可）。</li>
-              <li>每個時段各抽出 1 名，不重複得獎。</li>
-              <li>未選擇方案者不參與抽獎，活動其餘內容不受影響。</li>
-            </ul>
-            <div class="flex flex-wrap gap-3 pt-2">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-white/95">
+            <!-- 卡片：方案 A -->
+            <div class="rounded-2xl bg-white/10 p-6 card-hover">
+              <div class="text-xl font-bold mb-1">方案 A｜$100</div>
+              <p class="mb-2">16:25–16:30 最終抽｜獎品：餐費 NT$300｜名額：1 名</p>
+              <ul class="list-disc pl-5 text-base space-y-1 mb-4">
+                <li>事先轉帳完成方具抽獎資格</li>
+                <li>不重複得獎</li>
+              </ul>
               <button
                 class="px-4 py-2 rounded-full bg-white text-[#6C63FF] font-semibold hover:scale-105 transition"
                 @click="showPlanAModal = true"
               >了解方案 A</button>
+            </div>
+
+            <!-- 卡片：方案 B -->
+            <div class="rounded-2xl bg-white/10 p-6 card-hover">
+              <div class="text-xl font-bold mb-1">方案 B｜$200</div>
+              <p class="mb-2">15:30 早鳥抽｜獎品：Claude Pro 一個月（價值 20 美金）｜名額：1 名</p>
+              <ul class="list-disc pl-5 text-base space-y-1 mb-4">
+                <li>事先轉帳完成方具抽獎資格</li>
+                <li>不重複得獎</li>
+              </ul>
               <button
                 class="px-4 py-2 rounded-full bg-white text-[#6C63FF] font-semibold hover:scale-105 transition"
                 @click="showPlanBModal = true"
               >了解方案 B</button>
+            </div>
+
+            <!-- 卡片：規則／獎金池（跨兩欄） -->
+            <div class="rounded-2xl bg-white/10 p-6 md:col-span-2 card-hover">
+              <div class="text-xl font-bold mb-1">抽獎規則</div>
+              <ul class="list-disc pl-5 text-base space-y-1 mb-4">
+                <li>每人限擇一方案，皆為事先轉帳報名。</li>
+                <li>名額：15:30 早鳥 1 名（方案 B）｜16:25–16:30 最終 1 名（方案 A），不重複得獎。</li>
+                <li>報名後恕不退費，可轉讓名額予親友。</li>
+              </ul>
               <button
                 class="px-4 py-2 rounded-full bg-white/90 text-[#6C63FF] font-semibold hover:scale-105 transition"
                 @click="showRulesModal = true"
-              >獎金池說明</button>
+              >抽獎規則</button>
             </div>
           </div>
         </div>
@@ -246,14 +266,16 @@
       <section class="max-w-4xl mx-auto mb-16 fade-in-up">
         <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-xl">
           <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">💳 付款方式</h2>
-          <div class="space-y-4 text-white/95 text-lg leading-relaxed">
-            <div>
-              <p class="font-semibold mb-2">現場支付</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-white/95 text-lg leading-relaxed">
+            <div class="rounded-2xl bg-white/10 p-6 card-hover">
+              <p class="font-semibold mb-2">報名與退款政策</p>
               <ul class="list-disc pl-6 space-y-1 text-base md:text-lg">
-                <li>可使用現金或行動支付（請於現場與主辦確認）。</li>
+                <li>本活動僅支援事先轉帳，不提供現場支付。</li>
+                <li>完成轉帳＋送出下方 Google 表單 = 報名成功。</li>
+                <li>若報名後因事不克出席，敬請見諒恕不退費；建議可轉讓名額予親友參與。</li>
               </ul>
             </div>
-            <div>
+            <div class="rounded-2xl bg-white/10 p-6 card-hover">
               <p class="font-semibold mb-2">轉帳支付（請直接依下列資訊匯款）</p>
               <ul class="list-disc pl-6 space-y-1 text-base md:text-lg">
                 <li>戶名：范綱栓</li>
@@ -261,7 +283,7 @@
                 <li>分行：竹北分行（1034）</li>
                 <li>帳號：034540158873</li>
                 <li>聯絡電話：0933974490</li>
-                <li>完成轉帳後，請回覆信件提供「匯款末五碼」與「匯款時間」。</li>
+                <li>完成轉帳後，請在下方 Google 表單填寫「匯款後五碼」與「報名方案」。</li>
               </ul>
             </div>
           </div>
@@ -369,8 +391,8 @@
             <p>👉 本活動 限額 12 人，填寫下方表單報名參加！</p>
             <p>👉 活動費用自理（餐廳自由點餐，餐點費用約 300 元上下），無額外報名費</p>
             <p>👉 填完表單後，我們會寄送詳細提醒信件！</p>
-            <p>👉 表單需選擇付款方式（現場／轉帳）；若選轉帳，請依下方帳號匯款並回覆末五碼與時間。</p>
-            <p>👉 請在表單選擇方案 A（$100）或方案 B（$200），費用皆於現場支付。</p>
+            <p>👉 本活動僅支援事先轉帳：請依下方帳號匯款，並在表單填寫「匯款後五碼」與「報名方案」。</p>
+            <p>👉 請在表單選擇方案 A（$100）或方案 B（$200）；完成轉帳即視為報名成功（若因事不克出席，敬請見諒恕不退費，可轉讓名額）。</p>
           </div>
           <a
             href="https://forms.gle/56esaLJvPCgTh4nN6"
