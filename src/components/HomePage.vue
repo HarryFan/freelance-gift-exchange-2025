@@ -28,7 +28,7 @@
       <!-- 方案 A Modal -->
       <div
         v-if="showPlanAModal"
-        class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm p-4"
         @click="showPlanAModal = false"
         role="dialog"
         aria-modal="true"
@@ -38,8 +38,9 @@
           @click.stop
         >
           <button class="modal-close" @click="showPlanAModal = false">×</button>
-          <div class="text-4xl mb-2">💰</div>
-          <h3 class="text-2xl font-extrabold mb-2">餐費 NT$300</h3>
+          <div class="text-4xl mb-2 emoji-icon">💰</div>
+          <span class="badge badge-orange mb-2">加碼贊助獎</span>
+          <h3 class="text-3xl font-extrabold mb-1 tracking-tight">NT$ 300 餐費</h3>
           <p class="opacity-90 mb-5">可折抵本次聚餐費用</p>
           <div class="modal-note">
             <p class="font-semibold mb-2">抽獎條件：</p>
@@ -58,7 +59,7 @@
       <!-- 方案 B Modal -->
       <div
         v-if="showPlanBModal"
-        class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm p-4"
         @click="showPlanBModal = false"
         role="dialog"
         aria-modal="true"
@@ -68,9 +69,10 @@
           @click.stop
         >
           <button class="modal-close" @click="showPlanBModal = false">×</button>
-          <div class="text-4xl mb-2">🤖</div>
-          <h3 class="text-2xl font-extrabold mb-1">Cloud Pro 一個月</h3>
-          <p class="opacity-90 mb-5">價值 NT$650</p>
+          <div class="text-4xl mb-2 emoji-icon">🤖</div>
+          <span class="badge badge-purple mb-2">社團贊助</span>
+          <h3 class="text-3xl font-extrabold mb-1 tracking-tight">Claude Pro 一個月</h3>
+          <p class="opacity-90 mb-5">價值 20 美金</p>
           <div class="modal-note">
             <p class="font-semibold mb-2">抽獎條件：</p>
             <ul class="space-y-1">
@@ -88,7 +90,7 @@
       <!-- 抽獎說明 Modal -->
       <div
         v-if="showRulesModal"
-        class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm p-4"
         @click="showRulesModal = false"
         role="dialog"
         aria-modal="true"
@@ -98,15 +100,19 @@
           @click.stop
         >
           <button class="modal-close" @click="showRulesModal = false">×</button>
-          <div class="text-4xl mb-2">📜</div>
-          <h3 class="text-2xl font-extrabold mb-3">抽獎說明</h3>
-          <div class="modal-note">
-            <ul class="space-y-2">
-              <li>• 每人限擇一方案參加抽獎，不重複得獎。</li>
-              <li>• 方案 B 早鳥抽於 15:30 抽出 1 名。</li>
-              <li>• 方案 A 最終抽於 16:25–16:30 抽出 1 名。</li>
-              <li>• 以現場為準，未到場者視同放棄當次抽獎資格。</li>
+          <div class="text-4xl mb-2 emoji-icon">📜</div>
+          <span class="badge mb-2">獎金池計算方式</span>
+          <h3 class="text-2xl font-extrabold mb-3">如何計算與發放</h3>
+          <div class="modal-note space-y-2">
+            <p>扣除 100 元基本報名費後，剩餘金額累積為「實際獎金池」（以參與抽獎之人數計）。</p>
+            <p class="font-semibold">範例：</p>
+            <ul class="list-disc pl-5 space-y-1">
+              <li>3 人參與：實際獎金池 300 元 → 當次獎品為 300 元現金。</li>
+              <li>6 人參與：實際獎金池 600 元 → 可對等 20 美金，用於 Claude Pro 一個月。</li>
+              <li>10 人參與：實際獎金池 1000 元 → 拆為 2 份，各 500 元（抽 2 名）。</li>
             </ul>
+            <p class="font-semibold">超過 7 人：</p>
+            <p>實際獎金池將拆為 2 份，抽出 2 名各獲等比例金額（不重複得獎）。</p>
           </div>
           <button
             class="btn-gradient-orange"
@@ -229,7 +235,7 @@
               <button
                 class="px-4 py-2 rounded-full bg-white/90 text-[#6C63FF] font-semibold hover:scale-105 transition"
                 @click="showRulesModal = true"
-              >抽獎說明</button>
+              >獎金池說明</button>
             </div>
           </div>
         </div>
