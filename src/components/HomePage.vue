@@ -97,12 +97,36 @@
                   <td class="py-3 px-4">15:00 – 15:30</td>
                   <td class="py-3 px-4">🎁 交換禮物 + 簡短自我介紹</td>
                 </tr>
-                <tr>
-                  <td class="py-3 px-4">15:30 – 16:30</td>
+                <tr class="border-b border-white/10">
+                  <td class="py-3 px-4">15:30 – 15:35</td>
+                  <td class="py-3 px-4">🎟️ 早鳥抽獎（方案 B｜$200）：Cloud Pro 1 個月</td>
+                </tr>
+                <tr class="border-b border-white/10">
+                  <td class="py-3 px-4">15:35 – 16:25</td>
                   <td class="py-3 px-4">🍔 聚餐 + 自由交流（你要聊天、抱怨、約合作都可以）</td>
+                </tr>
+                <tr>
+                  <td class="py-3 px-4">16:25 – 16:30</td>
+                  <td class="py-3 px-4">🎉 最終抽獎（方案 A｜$100）：Cloud Pro 1 個月</td>
                 </tr>
               </tbody>
             </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- 方案與抽獎機制 -->
+      <section class="max-w-4xl mx-auto mb-16 fade-in-up">
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-xl">
+          <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">🎯 方案與抽獎機制</h2>
+          <div class="space-y-4 text-white/95 text-lg leading-relaxed">
+            <p><span class="font-semibold">方案 A｜$100</span>：參加 16:30 最終抽獎（獎品：Cloud Pro 1 個月，價值 $650）</p>
+            <p><span class="font-semibold">方案 B｜$200</span>：參加 15:30 早鳥抽獎（獎品：Cloud Pro 1 個月，價值 $650）</p>
+            <ul class="list-disc pl-6 space-y-2 text-base md:text-lg">
+              <li>每人限擇一方案；皆為現場支付（現金／行動支付皆可）。</li>
+              <li>每個時段各抽出 1 名，不重複得獎。</li>
+              <li>未選擇方案者不參與抽獎，活動其餘內容不受影響。</li>
+            </ul>
           </div>
         </div>
       </section>
@@ -208,6 +232,7 @@
             <p>👉 本活動 限額 12 人，填寫下方表單報名參加！</p>
             <p>👉 活動費用自理（餐廳自由點餐，餐點費用約 300 元上下），無額外報名費</p>
             <p>👉 填完表單後，我們會寄送詳細提醒信件！</p>
+            <p>👉 請在表單選擇方案 A（$100）或方案 B（$200），費用皆於現場支付。</p>
           </div>
           <a
             href="https://forms.gle/56esaLJvPCgTh4nN6"
