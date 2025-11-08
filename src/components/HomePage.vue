@@ -25,6 +25,96 @@
         </div>
       </section>
 
+      <!-- 方案 A Modal -->
+      <div
+        v-if="showPlanAModal"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
+        @click="showPlanAModal = false"
+        role="dialog"
+        aria-modal="true"
+      >
+        <div
+          class="w-full max-w-xl modal-card modal-a text-gray-900"
+          @click.stop
+        >
+          <button class="modal-close" @click="showPlanAModal = false">×</button>
+          <div class="text-4xl mb-2">💰</div>
+          <h3 class="text-2xl font-extrabold mb-2">餐費 NT$300</h3>
+          <p class="opacity-90 mb-5">可折抵本次聚餐費用</p>
+          <div class="modal-note">
+            <p class="font-semibold mb-2">抽獎條件：</p>
+            <ul class="space-y-1">
+              <li>✓ 16:25 在場即可參加 16:25–16:30 抽獎</li>
+              <li>✓ 所有選擇方案 A（$100）的參加者皆有機會</li>
+            </ul>
+          </div>
+          <button
+            class="btn-gradient-orange"
+            @click="showPlanAModal = false"
+          >我知道了</button>
+        </div>
+      </div>
+
+      <!-- 方案 B Modal -->
+      <div
+        v-if="showPlanBModal"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
+        @click="showPlanBModal = false"
+        role="dialog"
+        aria-modal="true"
+      >
+        <div
+          class="w-full max-w-xl modal-card modal-b text-gray-900"
+          @click.stop
+        >
+          <button class="modal-close" @click="showPlanBModal = false">×</button>
+          <div class="text-4xl mb-2">🤖</div>
+          <h3 class="text-2xl font-extrabold mb-1">Cloud Pro 一個月</h3>
+          <p class="opacity-90 mb-5">價值 NT$650</p>
+          <div class="modal-note">
+            <p class="font-semibold mb-2">抽獎條件：</p>
+            <ul class="space-y-1">
+              <li>✓ 15:30 在場即可參加 15:30 早鳥抽獎</li>
+              <li>✓ 所有選擇方案 B（$200）的參加者皆有機會</li>
+            </ul>
+          </div>
+          <button
+            class="btn-gradient-purple"
+            @click="showPlanBModal = false"
+          >我知道了</button>
+        </div>
+      </div>
+
+      <!-- 抽獎說明 Modal -->
+      <div
+        v-if="showRulesModal"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
+        @click="showRulesModal = false"
+        role="dialog"
+        aria-modal="true"
+      >
+        <div
+          class="w-full max-w-xl modal-card modal-info text-gray-900"
+          @click.stop
+        >
+          <button class="modal-close" @click="showRulesModal = false">×</button>
+          <div class="text-4xl mb-2">📜</div>
+          <h3 class="text-2xl font-extrabold mb-3">抽獎說明</h3>
+          <div class="modal-note">
+            <ul class="space-y-2">
+              <li>• 每人限擇一方案參加抽獎，不重複得獎。</li>
+              <li>• 方案 B 早鳥抽於 15:30 抽出 1 名。</li>
+              <li>• 方案 A 最終抽於 16:25–16:30 抽出 1 名。</li>
+              <li>• 以現場為準，未到場者視同放棄當次抽獎資格。</li>
+            </ul>
+          </div>
+          <button
+            class="btn-gradient-orange"
+            @click="showRulesModal = false"
+          >我了解了</button>
+        </div>
+      </div>
+
       <!-- 活動簡介 -->
       <section class="max-w-4xl mx-auto mb-16 fade-in-up">
         <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-xl">
@@ -107,7 +197,7 @@
                 </tr>
                 <tr>
                   <td class="py-3 px-4">16:25 – 16:30</td>
-                  <td class="py-3 px-4">🎉 最終抽獎（方案 A｜$100）：Cloud Pro 1 個月</td>
+                  <td class="py-3 px-4">🎉 最終抽獎（方案 A｜$100）：餐費 NT$300</td>
                 </tr>
               </tbody>
             </table>
@@ -120,13 +210,53 @@
         <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-xl">
           <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">🎯 方案與抽獎機制</h2>
           <div class="space-y-4 text-white/95 text-lg leading-relaxed">
-            <p><span class="font-semibold">方案 A｜$100</span>：參加 16:30 最終抽獎（獎品：Cloud Pro 1 個月，價值 $650）</p>
+            <p><span class="font-semibold">方案 A｜$100</span>：參加 16:30 最終抽獎（獎品：餐費 NT$300）</p>
             <p><span class="font-semibold">方案 B｜$200</span>：參加 15:30 早鳥抽獎（獎品：Cloud Pro 1 個月，價值 $650）</p>
             <ul class="list-disc pl-6 space-y-2 text-base md:text-lg">
               <li>每人限擇一方案；皆為現場支付（現金／行動支付皆可）。</li>
               <li>每個時段各抽出 1 名，不重複得獎。</li>
               <li>未選擇方案者不參與抽獎，活動其餘內容不受影響。</li>
             </ul>
+            <div class="flex flex-wrap gap-3 pt-2">
+              <button
+                class="px-4 py-2 rounded-full bg-white text-[#6C63FF] font-semibold hover:scale-105 transition"
+                @click="showPlanAModal = true"
+              >了解方案 A</button>
+              <button
+                class="px-4 py-2 rounded-full bg-white text-[#6C63FF] font-semibold hover:scale-105 transition"
+                @click="showPlanBModal = true"
+              >了解方案 B</button>
+              <button
+                class="px-4 py-2 rounded-full bg-white/90 text-[#6C63FF] font-semibold hover:scale-105 transition"
+                @click="showRulesModal = true"
+              >抽獎說明</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 付款方式 -->
+      <section class="max-w-4xl mx-auto mb-16 fade-in-up">
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-xl">
+          <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">💳 付款方式</h2>
+          <div class="space-y-4 text-white/95 text-lg leading-relaxed">
+            <div>
+              <p class="font-semibold mb-2">現場支付</p>
+              <ul class="list-disc pl-6 space-y-1 text-base md:text-lg">
+                <li>可使用現金或行動支付（請於現場與主辦確認）。</li>
+              </ul>
+            </div>
+            <div>
+              <p class="font-semibold mb-2">轉帳支付（請直接依下列資訊匯款）</p>
+              <ul class="list-disc pl-6 space-y-1 text-base md:text-lg">
+                <li>戶名：范綱栓</li>
+                <li>銀行：中國信託（代碼 822）</li>
+                <li>分行：竹北分行（1034）</li>
+                <li>帳號：034540158873</li>
+                <li>聯絡電話：0933974490</li>
+                <li>完成轉帳後，請回覆信件提供「匯款末五碼」與「匯款時間」。</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -232,6 +362,7 @@
             <p>👉 本活動 限額 12 人，填寫下方表單報名參加！</p>
             <p>👉 活動費用自理（餐廳自由點餐，餐點費用約 300 元上下），無額外報名費</p>
             <p>👉 填完表單後，我們會寄送詳細提醒信件！</p>
+            <p>👉 表單需選擇付款方式（現場／轉帳）；若選轉帳，請依下方帳號匯款並回覆末五碼與時間。</p>
             <p>👉 請在表單選擇方案 A（$100）或方案 B（$200），費用皆於現場支付。</p>
           </div>
           <a
@@ -259,6 +390,9 @@ const handleRegisterClick = () => {
 }
 
 const isGsapLoaded = ref(false)
+const showPlanAModal = ref(false)
+const showPlanBModal = ref(false)
+const showRulesModal = ref(false)
 
 onMounted(() => {
   // 检查 GSAP 是否加载
@@ -351,6 +485,77 @@ onMounted(() => {
 
 .delay-2000 {
   animation-delay: 2s;
+}
+
+/* ----- Modal styles (參考提供設計) ----- */
+.modal-card {
+  position: relative;
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+}
+
+.modal-a {
+  background: linear-gradient(180deg, #fde68a 0%, #f59e0b 100%);
+}
+
+.modal-b {
+  background: linear-gradient(180deg, #e9d5ff 0%, #a78bfa 100%);
+}
+
+.modal-info {
+  background: linear-gradient(180deg, #fff7ed 0%, #ffffff 100%);
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  border-radius: 9999px;
+  line-height: 28px;
+  text-align: center;
+  font-size: 20px;
+  color: #475569;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.modal-note {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.btn-gradient-orange {
+  width: 100%;
+  color: #fff;
+  font-weight: 700;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #fb923c 0%, #f97316 100%);
+  box-shadow: 0 12px 30px rgba(249, 115, 22, 0.35);
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.btn-gradient-purple {
+  width: 100%;
+  color: #fff;
+  font-weight: 700;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #a78bfa 0%, #7c3aed 100%);
+  box-shadow: 0 12px 30px rgba(124, 58, 237, 0.35);
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.btn-gradient-orange:hover,
+.btn-gradient-purple:hover {
+  transform: translateY(-1px);
 }
 </style>
 
