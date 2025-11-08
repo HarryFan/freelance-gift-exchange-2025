@@ -1,5 +1,5 @@
 <template>
-  <div ref="container" class="absolute inset-0 overflow-hidden pointer-events-none"></div>
+  <div ref="container" class="fixed inset-0 overflow-hidden pointer-events-none"></div>
 </template>
 
 <script setup>
@@ -14,6 +14,14 @@ onMounted(() => {
   const colors = ['#6C63FF', '#00C9FF', '#FFFFFF']
   const bubbles = []
 
+  const getSize = () => {
+    const el = container.value
+    const width = el?.clientWidth || window.innerWidth
+    // 優先使用容器的 scrollHeight 以覆蓋整個頁面高度
+    const height = el?.scrollHeight || el?.clientHeight || document.documentElement.scrollHeight || window.innerHeight
+    return { width, height }
+  }
+
   const createBubble = () => {
     const bubble = document.createElement('div')
     bubble.className = 'bubble'
@@ -23,9 +31,10 @@ onMounted(() => {
   }
 
   const animateBubble = (bubble) => {
+    const { width, height } = getSize()
     const size = gsap.utils.random(30, 120)
-    const startX = gsap.utils.random(0, window.innerWidth)
-    const startY = gsap.utils.random(window.innerHeight, window.innerHeight * 1.5)
+    const startX = gsap.utils.random(0, width)
+    const startY = gsap.utils.random(height, height * 1.5)
     const duration = gsap.utils.random(8, 15)
     const color = gsap.utils.random(colors)
 
@@ -48,13 +57,14 @@ onMounted(() => {
       repeat: -1,
       delay: gsap.utils.random(0, 10),
       onRepeat: () => {
+        const { width: w, height: h } = getSize()
         const newSize = gsap.utils.random(30, 120)
-        const newStartX = gsap.utils.random(0, window.innerWidth)
+        const newStartX = gsap.utils.random(0, w)
         gsap.set(bubble, {
           width: newSize,
           height: newSize,
           x: newStartX,
-          y: window.innerHeight + newSize,
+          y: h + newSize,
         })
       }
     })

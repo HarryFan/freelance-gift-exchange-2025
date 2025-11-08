@@ -7,8 +7,9 @@
     <div class="relative z-10 container mx-auto px-4 py-12 md:py-20">
       <!-- 活动标题 -->
       <section class="text-center mb-16 fade-in">
-        <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">
-          接案鬼故事｜年底交換禮物小聚
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight md:leading-snug tracking-tight">
+          <span class="whitespace-nowrap">接案鬼故事｜</span><br class="sm:hidden" />
+          <span class="whitespace-nowrap">年底交換禮物小聚</span>
         </h1>
         <p class="text-xl md:text-2xl text-white/90 mb-8">
           Freelance Gift Exchange 2025
@@ -38,7 +39,7 @@
           @click.stop
         >
           <button class="modal-close" @click="showPlanAModal = false">×</button>
-          <div class="text-4xl mb-2 emoji-icon">💰</div>
+          <div class="text-4xl mb-2 emoji-icon animate-bounce">💰</div>
           <span class="badge badge-orange mb-2">加碼贊助獎</span>
           <h3 class="text-3xl font-extrabold mb-1 tracking-tight">哈利小叔一獎｜餐費 NT$300</h3>
           <p class="opacity-90 mb-5">可折抵本次聚餐費用</p>
@@ -69,7 +70,7 @@
           @click.stop
         >
           <button class="modal-close" @click="showPlanBModal = false">×</button>
-          <div class="text-4xl mb-2 emoji-icon">🤖</div>
+          <div class="text-4xl mb-2 emoji-icon animate-bounce">🤖</div>
           <span class="badge badge-purple mb-2">社團贊助</span>
           <h3 class="text-3xl font-extrabold mb-1 tracking-tight">哈利小叔加碼獎｜Claude Pro 一個月</h3>
           <p class="opacity-90 mb-5">NT$650</p>
@@ -100,7 +101,7 @@
           @click.stop
         >
           <button class="modal-close" @click="showRulesModal = false">×</button>
-          <div class="text-4xl mb-2 emoji-icon">📜</div>
+          <div class="text-4xl mb-2 emoji-icon animate-bounce">📜</div>
           <span class="badge mb-2">抽獎規則</span>
           <h3 class="text-2xl font-extrabold mb-3">抽獎規則</h3>
           <div class="modal-note space-y-2">
@@ -120,7 +121,7 @@
       <!-- 活動簡介 -->
       <section class="max-w-4xl mx-auto mb-16 fade-in-up">
         <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-xl">
-          <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">🧭 活動簡介</h2>
+          <h2 class="text-2xl md:text-3xl font-bold text-white mb-6"><iconify-icon icon="ph:compass-duotone" class="mr-2 align-[-2px]"></iconify-icon>活動簡介</h2>
           <div class="space-y-4 text-white/95 text-lg leading-relaxed">
             <p>
               每年年底，都該有點小儀式，替這一年瘋狂又真實的接案人生，畫下一個「好啦算了我選擇原諒」的句點。
@@ -138,27 +139,30 @@
       <!-- 活動資訊 -->
       <section class="max-w-4xl mx-auto mb-16 fade-in-up">
         <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-xl">
-          <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">📅 活動資訊</h2>
-          <div class="space-y-4 text-white/95">
-            <div class="flex flex-col md:flex-row md:items-center gap-2">
-              <span class="font-semibold min-w-[120px]">活動時間｜</span>
-              <span>2025年 11 月 30 日（日）</span>
+          <h2 class="text-2xl md:text-3xl font-bold text-white mb-6"><iconify-icon icon="ph:calendar-dots-duotone" class="mr-2 align-[-2px]"></iconify-icon>活動資訊</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-white/95">
+            <!-- 卡：活動時間 -->
+            <div class="rounded-2xl bg-white/10 p-6">
+              <div class="flex items-center gap-2 font-semibold mb-2">
+                <iconify-icon icon="ph:clock-duotone" class="text-white" width="22" height="22"></iconify-icon>
+                <span>活動時間</span>
+              </div>
+              <div class="space-y-1 opacity-95">
+                <p>日期：2025 年 11 月 30 日（日）</p>
+                <p>前導集合：下午 14:30，二二八和平公園（館前路－國立台灣博物館前集合）</p>
+                <p>主活動：下午 15:00 – 15:30</p>
+                <p>交流：15:35–16:25（16:25–16:30 抽獎）</p>
+              </div>
             </div>
-            <div class="flex flex-col md:flex-row md:items-center gap-2">
-              <span class="font-semibold min-w-[120px]">前導集合｜</span>
-              <span>下午 14:30，二二八和平公園（館前路－國立台灣博物館前集合）</span>
-            </div>
-            <div class="flex flex-col md:flex-row md:items-center gap-2">
-              <span class="font-semibold min-w-[120px]">主活動時間｜</span>
-              <span>下午 15:00 – 15:30</span>
-            </div>
-            <div class="flex flex-col md:flex-row md:items-center gap-2">
-              <span class="font-semibold min-w-[120px]">主活動地點｜</span>
-              <span>Campus Cafe 館前店（台北市中正區館前路8號）</span>
-            </div>
-            <div class="flex flex-col md:flex-row md:items-center gap-2">
-              <span class="font-semibold min-w-[120px]">交流時間｜</span>
-              <span>15:35–16:25（16:25–16:30 抽獎）</span>
+            <!-- 卡：活動地點 -->
+            <div class="rounded-2xl bg-white/10 p-6">
+              <div class="flex items-center gap-2 font-semibold mb-2">
+                <iconify-icon icon="ph:map-pin-duotone" class="text-white" width="22" height="22"></iconify-icon>
+                <span>活動地點</span>
+              </div>
+              <div class="space-y-1 opacity-95">
+                <p>Campus Cafe 館前店（台北市中正區館前路 8 號）</p>
+              </div>
             </div>
           </div>
         </div>
@@ -167,7 +171,7 @@
       <!-- 活動流程 -->
       <section class="max-w-4xl mx-auto mb-16 fade-in-up">
         <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-xl">
-          <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">🧾 活動流程</h2>
+          <h2 class="text-2xl md:text-3xl font-bold text-white mb-6"><iconify-icon icon="ph:scroll-duotone" class="mr-2 align-[-2px]"></iconify-icon>活動流程</h2>
           <div class="overflow-x-auto">
             <table class="w-full text-white/95">
               <thead>
@@ -187,19 +191,19 @@
                 </tr>
                 <tr class="border-b border-white/10">
                   <td class="py-3 px-4">15:00 – 15:30</td>
-                  <td class="py-3 px-4">🎁 交換禮物 + 簡短自我介紹</td>
+                  <td class="py-3 px-4"><iconify-icon icon="ph:gift-duotone" class="mr-2 align-[-2px]"></iconify-icon>交換禮物 + 簡短自我介紹</td>
                 </tr>
                 <tr class="border-b border-white/10">
                   <td class="py-3 px-4">15:30 – 15:35</td>
-                  <td class="py-3 px-4">🎟️ 哈利小叔加碼獎抽獎（AI保佑我方案｜報名費$200）：哈利小叔加碼獎　Claude Pro 一個月 NT$650</td>
+                  <td class="py-3 px-4"><iconify-icon icon="ph:tickets-duotone" class="mr-2 align-[-2px]"></iconify-icon>哈利小叔加碼獎抽獎（AI保佑我方案｜報名費$200）：哈利小叔加碼獎　Claude Pro 一個月 NT$650</td>
                 </tr>
                 <tr class="border-b border-white/10">
                   <td class="py-3 px-4">15:35 – 16:25</td>
-                  <td class="py-3 px-4">🍔 聚餐 + 自由交流（你要聊天、抱怨、約合作都可以）</td>
+                  <td class="py-3 px-4"><iconify-icon icon="ph:hamburger-duotone" class="mr-2 align-[-2px]"></iconify-icon>聚餐 + 自由交流（你要聊天、抱怨、約合作都可以）</td>
                 </tr>
                 <tr>
                   <td class="py-3 px-4">16:25 – 16:30</td>
-                  <td class="py-3 px-4">🎉 哈利小叔一獎（一般方案｜報名費$100）：哈利小叔一獎　餐費 NT$300</td>
+                  <td class="py-3 px-4"><iconify-icon icon="ph:confetti-duotone" class="mr-2 align-[-2px]"></iconify-icon>哈利小叔一獎（一般方案｜報名費$100）：哈利小叔一獎　餐費 NT$300</td>
                 </tr>
               </tbody>
             </table>
@@ -210,7 +214,7 @@
       <!-- 方案與抽獎機制 -->
       <section class="max-w-4xl mx-auto mb-16 fade-in-up">
         <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-xl">
-          <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">🎯 報名方案與抽獎機制</h2>
+          <h2 class="text-2xl md:text-3xl font-bold text-white mb-6"><iconify-icon icon="ph:target-duotone" class="mr-2 align-[-2px]"></iconify-icon>報名方案與抽獎機制</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-white/95">
 
             <!-- 卡片：方案（一般） -->
@@ -261,7 +265,7 @@
       <!-- 付款方式 -->
       <section class="max-w-4xl mx-auto mb-16 fade-in-up">
         <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-xl">
-          <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">💳 付款方式</h2>
+          <h2 class="text-2xl md:text-3xl font-bold text-white mb-6"><iconify-icon icon="ph:credit-card-duotone" class="mr-2 align-[-2px]"></iconify-icon>付款方式</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-white/95 text-lg leading-relaxed">
             <div class="rounded-2xl bg-white/10 p-6 card-hover">
               <p class="font-semibold mb-2">報名與退款政策</p>
@@ -289,7 +293,7 @@
       <!-- 禮物規則 -->
       <section class="max-w-4xl mx-auto mb-16 fade-in-up">
         <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-xl">
-          <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">🎁 禮物規則</h2>
+          <h2 class="text-2xl md:text-3xl font-bold text-white mb-6"><iconify-icon icon="ph:gift-duotone" class="mr-2 align-[-2px]"></iconify-icon>禮物規則</h2>
           <div class="space-y-4 text-white/95 text-lg leading-relaxed">
             <p class="font-semibold">
               不限主題、不限價格（建議 300–500 元）
@@ -382,7 +386,7 @@
       <!-- 報名方式 -->
       <section class="max-w-4xl mx-auto mb-16 fade-in-up">
         <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-xl text-center">
-          <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">📌 報名方式</h2>
+          <h2 class="text-2xl md:text-3xl font-bold text-white mb-6"><iconify-icon icon="ph:push-pin-duotone" class="mr-2 align-[-2px]"></iconify-icon>報名方式</h2>
           <div class="space-y-4 text-white/95 text-lg mb-8">
             <p>👉 本活動 限額 12 人，填寫下方表單報名參加！</p>
             <p>👉 活動費用自理（餐廳自由點餐，餐點費用約 300 元上下），無額外報名費</p>
