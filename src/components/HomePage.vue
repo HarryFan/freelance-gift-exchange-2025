@@ -13,14 +13,14 @@
         <p class="text-xl md:text-2xl text-white/90 mb-8">
           Freelance Gift Exchange 2025
         </p>
-        
+
         <!-- 副標語 -->
         <div class="max-w-3xl mx-auto space-y-3">
           <p class="text-lg md:text-xl text-white/95 leading-relaxed">
-            送出你想告別的禮物，換回一點我們都懂的療癒
+            帶上一份你用心準備的禮物，換回一點我們都懂的療癒
           </p>
           <p class="text-lg md:text-xl text-white/95 leading-relaxed">
-            用禮物打開話題，用故事連結人心
+            用禮物打開話題，用交流連結人心
           </p>
         </div>
       </section>
@@ -34,7 +34,7 @@
               每年年底，都該有點小儀式，替這一年瘋狂又真實的接案人生，畫下一個「好啦算了我選擇原諒」的句點。
             </p>
             <p>
-              我們邀請你，帶來一份能「分享故事或創造驚喜」的禮物。它可能是一本啟發你的書、一個有趣的設計小物，或任何你認為值得分享的物品。重點是故事，不是價格，讓我們用禮物交換一段難忘的回憶。
+              我們邀請你，帶來一份能「創造驚喜」的禮物。它可以是你新購入的書籍、精選的設計小物等；需為全新或近新品、外觀與功能完整。重點不是價格，讓我們用禮物帶來一段愉快的體驗（非斷捨離、非清倉）。
             </p>
             <p class="font-medium">
               這是一場溫柔的交換，也是一場自由接案人生的對話。
@@ -50,7 +50,7 @@
           <div class="space-y-4 text-white/95">
             <div class="flex flex-col md:flex-row md:items-center gap-2">
               <span class="font-semibold min-w-[120px]">活動時間｜</span>
-              <span>2024 年 11 月 30 日（日）</span>
+              <span>2025年 11 月 30 日（日）</span>
             </div>
             <div class="flex flex-col md:flex-row md:items-center gap-2">
               <span class="font-semibold min-w-[120px]">前導集合｜</span>
@@ -116,10 +116,13 @@
               不限主題、不限價格（建議300元上下，超過也沒關係）
             </p>
             <p>
-              歡迎：創意工具、書籍、前東家週邊、廢物療癒小物、奇葩案子的紀念品
+              歡迎：創意工具、書籍、設計小物、靈感卡牌、限定週邊等（需為全新或近新品，外觀完整）
+            </p>
+            <p>
+              避免：損壞或功能不全、過期／開封食品或化妝品、二手貼身／衛生用品、企業贈品清倉、明顯瑕疵或有氣味之物
             </p>
             <p class="font-medium">
-              重點是「有故事」可分享，不用特別買，但帶誠意來！
+              建議用心挑選，以全新或近新品為主。
             </p>
           </div>
         </div>
@@ -162,7 +165,7 @@
             </li>
             <li class="flex items-start">
               <span class="mr-2">•</span>
-              <span>想擺脫孤單與社交尷尬，用一杯咖啡＋一個故事找到共鳴的人</span>
+              <span>想擺脫孤單與社交尷尬，用一杯咖啡＋輕鬆聊天找到共鳴的人</span>
             </li>
             <li class="flex items-start">
               <span class="mr-2">•</span>
@@ -238,11 +241,11 @@ onMounted(() => {
     try {
       isGsapLoaded.value = true
       const gsap = window.gsap
-      
+
       // 立即设置初始状态为不可见，准备动画（在 CSS 动画开始前）
       gsap.set('.fade-in', { opacity: 0, y: -30, clearProps: 'animation' })
       gsap.set('.fade-in-up', { opacity: 0, y: 30, clearProps: 'animation' })
-      
+
       // 使用 requestAnimationFrame 确保在下一帧执行动画
       requestAnimationFrame(() => {
         const tl = gsap.timeline({
