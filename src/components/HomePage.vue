@@ -113,7 +113,7 @@
           <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">🎁 禮物規則</h2>
           <div class="space-y-4 text-white/95 text-lg leading-relaxed">
             <p class="font-semibold">
-              不限主題、不限價格（建議300元上下，超過也沒關係）
+              不限主題、不限價格（建議 300–500 元）
             </p>
             <p>
               歡迎：創意工具、書籍、設計小物、靈感卡牌、限定週邊等（需為全新或近新品，外觀完整）
