@@ -40,13 +40,13 @@
           <button class="modal-close" @click="showPlanAModal = false">×</button>
           <div class="text-4xl mb-2 emoji-icon">💰</div>
           <span class="badge badge-orange mb-2">加碼贊助獎</span>
-          <h3 class="text-3xl font-extrabold mb-1 tracking-tight">NT$ 300 餐費</h3>
+          <h3 class="text-3xl font-extrabold mb-1 tracking-tight">哈利小叔一獎｜餐費 NT$300</h3>
           <p class="opacity-90 mb-5">可折抵本次聚餐費用</p>
           <div class="modal-note">
             <p class="font-semibold mb-2">抽獎條件：</p>
             <ul class="space-y-1">
               <li>✓ 16:25 在場即可參加 16:25–16:30 抽獎</li>
-              <li>✓ 所有選擇方案 A（$100）的參加者皆有機會</li>
+              <li>✓ 所有選擇一般方案（$100）的參加者皆有機會</li>
             </ul>
           </div>
           <button
@@ -71,13 +71,13 @@
           <button class="modal-close" @click="showPlanBModal = false">×</button>
           <div class="text-4xl mb-2 emoji-icon">🤖</div>
           <span class="badge badge-purple mb-2">社團贊助</span>
-          <h3 class="text-3xl font-extrabold mb-1 tracking-tight">Claude Pro 一個月</h3>
-          <p class="opacity-90 mb-5">價值 20 美金</p>
+          <h3 class="text-3xl font-extrabold mb-1 tracking-tight">哈利小叔加碼獎｜Claude Pro 一個月</h3>
+          <p class="opacity-90 mb-5">NT$650</p>
           <div class="modal-note">
             <p class="font-semibold mb-2">抽獎條件：</p>
             <ul class="space-y-1">
-              <li>✓ 15:30 在場即可參加 15:30 早鳥抽獎</li>
-              <li>✓ 所有選擇方案 B（$200）的參加者皆有機會</li>
+              <li>✓ 15:30 在場即可參加 15:30 哈利小叔加碼獎抽獎</li>
+              <li>✓ 所有選擇AI保佑我方案（$200）的參加者皆有機會</li>
             </ul>
           </div>
           <button
@@ -101,19 +101,14 @@
         >
           <button class="modal-close" @click="showRulesModal = false">×</button>
           <div class="text-4xl mb-2 emoji-icon">📜</div>
-          <span class="badge mb-2">獎金池計算方式</span>
-          <h3 class="text-2xl font-extrabold mb-3">如何計算與發放</h3>
+          <span class="badge mb-2">抽獎規則</span>
+          <h3 class="text-2xl font-extrabold mb-3">抽獎規則</h3>
           <div class="modal-note space-y-2">
-            <p>扣除 100 元基本報名費後，剩餘金額累積為「實際獎金池」（以參與抽獎之人數計）。</p>
-            <p class="font-semibold">範例：</p>
             <ul class="list-disc pl-5 space-y-1">
-              <li>3 人參與：實際獎金池 300 元 → 當次獎品為 300 元現金。</li>
-              <li>6 人參與：實際獎金池 600 元 → 可對等 20 美金，用於 Claude Pro 一個月。</li>
-              <li>10 人參與：實際獎金池 1000 元 → 拆為 2 份，各 500 元（抽 2 名）。</li>
+              <li>每人限擇一方案：一般方案（$100）或 AI保佑我方案（$200）。</li>
+              <li>名額：15:30 哈利小叔加碼獎（AI保佑我方案）抽 1 名｜16:25–16:30 哈利小叔一獎（一般方案）抽 1 名。</li>
+              <li>不重複得獎；報名後恕不退費，可轉讓名額予親友。</li>
             </ul>
-            <p class="font-semibold">超過 7 人：</p>
-            <p>實際獎金池將拆為 2 份，抽出 2 名各獲等比例金額（不重複得獎）。</p>
-            <p>發獎方式：15:30 早鳥抽（方案 B）抽出 1 名；16:25–16:30 最終抽（方案 A）再抽出 1 名。</p>
           </div>
           <button
             class="btn-gradient-orange"
@@ -163,7 +158,7 @@
             </div>
             <div class="flex flex-col md:flex-row md:items-center gap-2">
               <span class="font-semibold min-w-[120px]">交流時間｜</span>
-              <span>聚餐交流至 16:30，自由離席或續攤</span>
+              <span>15:35–16:25（16:25–16:30 抽獎）</span>
             </div>
           </div>
         </div>
@@ -196,7 +191,7 @@
                 </tr>
                 <tr class="border-b border-white/10">
                   <td class="py-3 px-4">15:30 – 15:35</td>
-                  <td class="py-3 px-4">🎟️ 早鳥抽獎（方案 B｜$200）：Cloud Pro 1 個月</td>
+                  <td class="py-3 px-4">🎟️ 哈利小叔加碼獎抽獎（AI保佑我方案｜報名費$200）：哈利小叔加碼獎　Claude Pro 一個月 NT$650</td>
                 </tr>
                 <tr class="border-b border-white/10">
                   <td class="py-3 px-4">15:35 – 16:25</td>
@@ -204,7 +199,7 @@
                 </tr>
                 <tr>
                   <td class="py-3 px-4">16:25 – 16:30</td>
-                  <td class="py-3 px-4">🎉 最終抽獎（方案 A｜$100）：餐費 NT$300</td>
+                  <td class="py-3 px-4">🎉 哈利小叔一獎（一般方案｜報名費$100）：哈利小叔一獎　餐費 NT$300</td>
                 </tr>
               </tbody>
             </table>
@@ -215,12 +210,13 @@
       <!-- 方案與抽獎機制 -->
       <section class="max-w-4xl mx-auto mb-16 fade-in-up">
         <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-xl">
-          <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">🎯 方案與抽獎機制</h2>
+          <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">🎯 報名方案與抽獎機制</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-white/95">
-            <!-- 卡片：方案 A -->
+
+            <!-- 卡片：方案（一般） -->
             <div class="rounded-2xl bg-white/10 p-6 card-hover">
-              <div class="text-xl font-bold mb-1">方案 A｜$100</div>
-              <p class="mb-2">16:25–16:30 最終抽｜獎品：餐費 NT$300｜名額：1 名</p>
+              <div class="text-xl font-bold mb-1">一般方案｜報名費$100</div>
+              <p class="mb-2">16:25–16:30 最終抽｜獎品：哈利小叔一獎　餐費 NT$300｜名額：1 名</p>
               <ul class="list-disc pl-5 text-base space-y-1 mb-4">
                 <li>事先轉帳完成方具抽獎資格</li>
                 <li>不重複得獎</li>
@@ -228,13 +224,13 @@
               <button
                 class="px-4 py-2 rounded-full bg-white text-[#6C63FF] font-semibold hover:scale-105 transition"
                 @click="showPlanAModal = true"
-              >了解方案 A</button>
+              >了解一般方案</button>
             </div>
 
-            <!-- 卡片：方案 B -->
+            <!-- 卡片：方案（AI保佑我） -->
             <div class="rounded-2xl bg-white/10 p-6 card-hover">
-              <div class="text-xl font-bold mb-1">方案 B｜$200</div>
-              <p class="mb-2">15:30 早鳥抽｜獎品：Claude Pro 一個月（價值 20 美金）｜名額：1 名</p>
+              <div class="text-xl font-bold mb-1">AI保佑我方案｜報名費$200</div>
+              <p class="mb-2">15:30 哈利小叔加碼獎抽｜獎品：哈利小叔加碼獎　Claude Pro 一個月 NT$650｜名額：1 名</p>
               <ul class="list-disc pl-5 text-base space-y-1 mb-4">
                 <li>事先轉帳完成方具抽獎資格</li>
                 <li>不重複得獎</li>
@@ -242,7 +238,7 @@
               <button
                 class="px-4 py-2 rounded-full bg-white text-[#6C63FF] font-semibold hover:scale-105 transition"
                 @click="showPlanBModal = true"
-              >了解方案 B</button>
+              >了解 AI保佑我方案</button>
             </div>
 
             <!-- 卡片：規則／獎金池（跨兩欄） -->
@@ -250,7 +246,7 @@
               <div class="text-xl font-bold mb-1">抽獎規則</div>
               <ul class="list-disc pl-5 text-base space-y-1 mb-4">
                 <li>每人限擇一方案，皆為事先轉帳報名。</li>
-                <li>名額：15:30 早鳥 1 名（方案 B）｜16:25–16:30 最終 1 名（方案 A），不重複得獎。</li>
+                <li>名額：15:30 哈利小叔加碼獎 1 名（AI保佑我方案）｜16:25–16:30 哈利小叔一獎 1 名（一般方案），不重複得獎。</li>
                 <li>報名後恕不退費，可轉讓名額予親友。</li>
               </ul>
               <button
@@ -392,7 +388,7 @@
             <p>👉 活動費用自理（餐廳自由點餐，餐點費用約 300 元上下），無額外報名費</p>
             <p>👉 填完表單後，我們會寄送詳細提醒信件！</p>
             <p>👉 本活動僅支援事先轉帳：請依下方帳號匯款，並在表單填寫「匯款後五碼」與「報名方案」。</p>
-            <p>👉 請在表單選擇方案 A（$100）或方案 B（$200）；完成轉帳即視為報名成功（若因事不克出席，敬請見諒恕不退費，可轉讓名額）。</p>
+            <p>👉 請在表單選擇一般方案（$100）或 AI保佑我方案（$200）；完成轉帳即視為報名成功（若因事不克出席，敬請見諒恕不退費，可轉讓名額）。</p>
           </div>
           <a
             href="https://forms.gle/56esaLJvPCgTh4nN6"
