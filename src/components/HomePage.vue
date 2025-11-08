@@ -34,7 +34,7 @@
         aria-modal="true"
       >
         <div
-          class="w-full max-w-xl modal-card modal-a text-gray-900"
+          class="w-full max-w-xl modal-card modal-a text-gray-900 modal-enter"
           @click.stop
         >
           <button class="modal-close" @click="showPlanAModal = false">×</button>
@@ -65,7 +65,7 @@
         aria-modal="true"
       >
         <div
-          class="w-full max-w-xl modal-card modal-b text-gray-900"
+          class="w-full max-w-xl modal-card modal-b text-gray-900 modal-enter"
           @click.stop
         >
           <button class="modal-close" @click="showPlanBModal = false">×</button>
@@ -96,7 +96,7 @@
         aria-modal="true"
       >
         <div
-          class="w-full max-w-xl modal-card modal-info text-gray-900"
+          class="w-full max-w-xl modal-card modal-info text-gray-900 modal-enter"
           @click.stop
         >
           <button class="modal-close" @click="showRulesModal = false">×</button>
@@ -562,6 +562,72 @@ onMounted(() => {
 .btn-gradient-orange:hover,
 .btn-gradient-purple:hover {
   transform: translateY(-1px);
+}
+
+/* Modal enter animation */
+.modal-enter {
+  animation: modalEnter 200ms ease-out;
+}
+
+@keyframes modalEnter {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* CTA pulse */
+.btn-gradient-orange,
+.btn-gradient-purple {
+  animation: ctaPulse 2.4s ease-in-out infinite;
+}
+
+@keyframes ctaPulse {
+  0%, 100% { filter: brightness(1); box-shadow: inherit; }
+  50% { filter: brightness(1.05); box-shadow: 0 16px 40px rgba(0,0,0,0.18); }
+}
+
+/* Mobile typography tweaks */
+@media (max-width: 640px) {
+  .modal-card h3 { font-size: 1.25rem; }
+  .modal-card .modal-note { font-size: 0.95rem; }
+  .modal-card .emoji-icon { font-size: 1.75rem; }
+}
+
+/* Emoji bounce + glow */
+.emoji-icon {
+  position: relative;
+  display: inline-block;
+  animation: emojiBounce 2.2s ease-in-out infinite;
+}
+
+.modal-a .emoji-icon::after,
+.modal-b .emoji-icon::after,
+.modal-info .emoji-icon::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 64px;
+  height: 64px;
+  transform: translate(-50%, -50%);
+  border-radius: 9999px;
+  filter: blur(12px);
+  opacity: 0.55;
+  animation: emojiGlow 2.2s ease-in-out infinite;
+  z-index: -1;
+}
+
+.modal-a .emoji-icon::after { background: radial-gradient(closest-side, rgba(251,146,60,0.9), rgba(251,146,60,0.15), transparent); }
+.modal-b .emoji-icon::after { background: radial-gradient(closest-side, rgba(167,139,250,0.9), rgba(167,139,250,0.15), transparent); }
+.modal-info .emoji-icon::after { background: radial-gradient(closest-side, rgba(252,211,77,0.9), rgba(252,211,77,0.15), transparent); }
+
+@keyframes emojiBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes emojiGlow {
+  0%, 100% { opacity: 0.45; filter: blur(10px); }
+  50% { opacity: 0.8; filter: blur(14px); }
 }
 </style>
 
