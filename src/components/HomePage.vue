@@ -113,6 +113,7 @@
             </ul>
             <p class="font-semibold">超過 7 人：</p>
             <p>實際獎金池將拆為 2 份，抽出 2 名各獲等比例金額（不重複得獎）。</p>
+            <p>發獎方式：15:30 早鳥抽（方案 B）抽出 1 名；16:25–16:30 最終抽（方案 A）再抽出 1 名。</p>
           </div>
           <button
             class="btn-gradient-orange"
