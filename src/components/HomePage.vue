@@ -160,8 +160,17 @@
                 <iconify-icon icon="ph:map-pin-duotone" class="text-white" width="22" height="22"></iconify-icon>
                 <span>活動地點</span>
               </div>
-              <div class="space-y-1 opacity-95">
-                <p>Campus Cafe 館前店（台北市中正區館前路 8 號）</p>
+              <div class="space-y-2 opacity-95">
+                <p>Campus Cafe 站前店（台北市中正區館前路 8 號）</p>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Campus+Cafe+站前店+台北市中正區館前路8號"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 text-white text-sm font-medium hover:bg-white/30 transition-colors"
+                >
+                  <iconify-icon icon="ph:map-trifold-duotone" class="text-white" width="18" height="18"></iconify-icon>
+                  <span>查看地圖</span>
+                </a>
               </div>
             </div>
           </div>
